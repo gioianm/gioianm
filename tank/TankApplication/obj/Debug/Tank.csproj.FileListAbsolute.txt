@@ -1,0 +1,13 @@
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\Tank.csprojAssemblyReference.cache
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\BrilliantApplication.MainForm.resources
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\Tank.csproj.GenerateResource.cache
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\BrilliantApplication.Properties.Resources.resources
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\Tank.csproj.CoreCompileInputs.cache
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\bin\Debug\BlocksLibrary.dll
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\bin\Debug\BlocksLibrary.pdb
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\Tank.csproj.CopyComplete
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\bin\Debug\TankApplication.exe.config
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\bin\Debug\TankApplication.exe
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\bin\Debug\TankApplication.pdb
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\TankApplication.exe
+C:\Users\batch\Desktop\lab1lubitsky\tank\BrilliantApplication\obj\Debug\TankApplication.pdb

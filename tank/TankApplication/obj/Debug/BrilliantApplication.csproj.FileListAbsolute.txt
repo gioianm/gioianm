@@ -1,0 +1,13 @@
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\bin\Debug\BrilliantApplication.exe.config
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\bin\Debug\BrilliantApplication.exe
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\bin\Debug\BrilliantApplication.pdb
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\bin\Debug\BlocksLibrary.dll
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\bin\Debug\BlocksLibrary.pdb
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.csprojAssemblyReference.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.MainForm.resources
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.Properties.Resources.resources
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.csproj.GenerateResource.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.csproj.CoreCompileInputs.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.csproj.CopyComplete
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.exe
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BrilliantApplication\obj\Debug\BrilliantApplication.pdb

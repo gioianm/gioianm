@@ -1,0 +1,9 @@
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\bin\Debug\netstandard2.0\BlocksLibrary.deps.json
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\bin\Debug\netstandard2.0\BlocksLibrary.dll
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\bin\Debug\netstandard2.0\BlocksLibrary.pdb
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.csprojAssemblyReference.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.csproj.CoreCompileInputs.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.AssemblyInfoInputs.cache
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.AssemblyInfo.cs
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.dll
+C:\Users\batch\Desktop\lab1lubitsky\BrilliantAplication\BlocksLibrary\obj\Debug\netstandard2.0\BlocksLibrary.pdb
