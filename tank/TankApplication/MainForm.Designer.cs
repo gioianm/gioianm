@@ -53,6 +53,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.helpValveLabel = new System.Windows.Forms.Label();
+            this.kLabel = new System.Windows.Forms.Label();
+            this.kiLabel = new System.Windows.Forms.Label();
+            this.kdLabel = new System.Windows.Forms.Label();
+            this.kTextBox = new System.Windows.Forms.TextBox();
+            this.kdTextBox = new System.Windows.Forms.TextBox();
+            this.kiTextBox = new System.Windows.Forms.TextBox();
+            this.workStateLabel = new System.Windows.Forms.Label();
+            this.regulatorTaskTextBox = new System.Windows.Forms.TextBox();
+            this.currentRegulatorTaskLabel = new System.Windows.Forms.Label();
+            this.sendSettingsButton = new System.Windows.Forms.Button();
+            this.automaticControlButton = new System.Windows.Forms.Button();
+            this.sendRegulatorTaskButton = new System.Windows.Forms.Button();
+            this.manualControlButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.waterLimitStateChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -270,11 +283,141 @@
             this.helpValveLabel.TabIndex = 7;
             this.helpValveLabel.Text = "Noise";
             // 
+            // kLabel
+            // 
+            this.kLabel.AutoSize = true;
+            this.kLabel.Location = new System.Drawing.Point(48, 26);
+            this.kLabel.Name = "kLabel";
+            this.kLabel.Size = new System.Drawing.Size(50, 20);
+            this.kLabel.TabIndex = 26;
+            this.kLabel.Text = "klabel";
+            // 
+            // kiLabel
+            // 
+            this.kiLabel.AutoSize = true;
+            this.kiLabel.Location = new System.Drawing.Point(48, 54);
+            this.kiLabel.Name = "kiLabel";
+            this.kiLabel.Size = new System.Drawing.Size(53, 20);
+            this.kiLabel.TabIndex = 27;
+            this.kiLabel.Text = "kilabel";
+            // 
+            // kdLabel
+            // 
+            this.kdLabel.AutoSize = true;
+            this.kdLabel.Location = new System.Drawing.Point(48, 86);
+            this.kdLabel.Name = "kdLabel";
+            this.kdLabel.Size = new System.Drawing.Size(59, 20);
+            this.kdLabel.TabIndex = 28;
+            this.kdLabel.Text = "kdlabel";
+            // 
+            // kTextBox
+            // 
+            this.kTextBox.Location = new System.Drawing.Point(119, 26);
+            this.kTextBox.Name = "kTextBox";
+            this.kTextBox.Size = new System.Drawing.Size(30, 26);
+            this.kTextBox.TabIndex = 29;
+            // 
+            // kdTextBox
+            // 
+            this.kdTextBox.Location = new System.Drawing.Point(119, 86);
+            this.kdTextBox.Name = "kdTextBox";
+            this.kdTextBox.Size = new System.Drawing.Size(30, 26);
+            this.kdTextBox.TabIndex = 30;
+            // 
+            // kiTextBox
+            // 
+            this.kiTextBox.Location = new System.Drawing.Point(119, 54);
+            this.kiTextBox.Name = "kiTextBox";
+            this.kiTextBox.Size = new System.Drawing.Size(30, 26);
+            this.kiTextBox.TabIndex = 31;
+            // 
+            // workStateLabel
+            // 
+            this.workStateLabel.AutoSize = true;
+            this.workStateLabel.Location = new System.Drawing.Point(499, 92);
+            this.workStateLabel.Name = "workStateLabel";
+            this.workStateLabel.Size = new System.Drawing.Size(81, 20);
+            this.workStateLabel.TabIndex = 32;
+            this.workStateLabel.Text = "workState";
+            // 
+            // regulatorTaskTextBox
+            // 
+            this.regulatorTaskTextBox.Location = new System.Drawing.Point(119, 118);
+            this.regulatorTaskTextBox.Name = "regulatorTaskTextBox";
+            this.regulatorTaskTextBox.Size = new System.Drawing.Size(75, 26);
+            this.regulatorTaskTextBox.TabIndex = 34;
+            // 
+            // currentRegulatorTaskLabel
+            // 
+            this.currentRegulatorTaskLabel.AutoSize = true;
+            this.currentRegulatorTaskLabel.Location = new System.Drawing.Point(48, 118);
+            this.currentRegulatorTaskLabel.Name = "currentRegulatorTaskLabel";
+            this.currentRegulatorTaskLabel.Size = new System.Drawing.Size(65, 20);
+            this.currentRegulatorTaskLabel.TabIndex = 35;
+            this.currentRegulatorTaskLabel.Text = "curTask";
+            // 
+            // sendSettingsButton
+            // 
+            this.sendSettingsButton.Location = new System.Drawing.Point(282, 352);
+            this.sendSettingsButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sendSettingsButton.Name = "sendSettingsButton";
+            this.sendSettingsButton.Size = new System.Drawing.Size(112, 35);
+            this.sendSettingsButton.TabIndex = 36;
+            this.sendSettingsButton.Text = "sendSettings";
+            this.sendSettingsButton.UseVisualStyleBackColor = true;
+            this.sendSettingsButton.Click += new System.EventHandler(this.SendSettingsButton_Click_1);
+            // 
+            // automaticControlButton
+            // 
+            this.automaticControlButton.Location = new System.Drawing.Point(593, 353);
+            this.automaticControlButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.automaticControlButton.Name = "automaticControlButton";
+            this.automaticControlButton.Size = new System.Drawing.Size(141, 35);
+            this.automaticControlButton.TabIndex = 37;
+            this.automaticControlButton.Text = "automaticControl";
+            this.automaticControlButton.UseVisualStyleBackColor = true;
+            this.automaticControlButton.Click += new System.EventHandler(this.AutomaticControlButton_Click_1);
+            // 
+            // sendRegulatorTaskButton
+            // 
+            this.sendRegulatorTaskButton.Location = new System.Drawing.Point(416, 353);
+            this.sendRegulatorTaskButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sendRegulatorTaskButton.Name = "sendRegulatorTaskButton";
+            this.sendRegulatorTaskButton.Size = new System.Drawing.Size(164, 35);
+            this.sendRegulatorTaskButton.TabIndex = 38;
+            this.sendRegulatorTaskButton.Text = "sendRegulatorTask";
+            this.sendRegulatorTaskButton.UseVisualStyleBackColor = true;
+            this.sendRegulatorTaskButton.Click += new System.EventHandler(this.SendRegulatorTaskButton_Click_1);
+            // 
+            // manualControlButton
+            // 
+            this.manualControlButton.Location = new System.Drawing.Point(742, 353);
+            this.manualControlButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manualControlButton.Name = "manualControlButton";
+            this.manualControlButton.Size = new System.Drawing.Size(123, 35);
+            this.manualControlButton.TabIndex = 39;
+            this.manualControlButton.Text = "manualControl";
+            this.manualControlButton.UseVisualStyleBackColor = true;
+            this.manualControlButton.Click += new System.EventHandler(this.ManualControlButton_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 401);
+            this.Controls.Add(this.manualControlButton);
+            this.Controls.Add(this.sendRegulatorTaskButton);
+            this.Controls.Add(this.automaticControlButton);
+            this.Controls.Add(this.sendSettingsButton);
+            this.Controls.Add(this.currentRegulatorTaskLabel);
+            this.Controls.Add(this.regulatorTaskTextBox);
+            this.Controls.Add(this.workStateLabel);
+            this.Controls.Add(this.kiTextBox);
+            this.Controls.Add(this.kdTextBox);
+            this.Controls.Add(this.kTextBox);
+            this.Controls.Add(this.kdLabel);
+            this.Controls.Add(this.kiLabel);
+            this.Controls.Add(this.kLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -326,6 +469,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label helpValveLabel;
+        private System.Windows.Forms.Label kLabel;
+        private System.Windows.Forms.Label kiLabel;
+        private System.Windows.Forms.Label kdLabel;
+        private System.Windows.Forms.TextBox kTextBox;
+        private System.Windows.Forms.TextBox kdTextBox;
+        private System.Windows.Forms.TextBox kiTextBox;
+        private System.Windows.Forms.Label workStateLabel;
+        private System.Windows.Forms.TextBox regulatorTaskTextBox;
+        private System.Windows.Forms.Label currentRegulatorTaskLabel;
+        private System.Windows.Forms.Button sendSettingsButton;
+        private System.Windows.Forms.Button automaticControlButton;
+        private System.Windows.Forms.Button sendRegulatorTaskButton;
+        private System.Windows.Forms.Button manualControlButton;
     }
 }
 

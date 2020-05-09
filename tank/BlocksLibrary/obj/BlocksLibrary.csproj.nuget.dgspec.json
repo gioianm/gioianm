@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\batch\\Desktop\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj": {}
+    "C:\\Users\\batch\\Desktop\\КПИ\\3 курс 2 сместр\\ТРПЗ\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\batch\\Desktop\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj": {
+    "C:\\Users\\batch\\Desktop\\КПИ\\3 курс 2 сместр\\ТРПЗ\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\batch\\Desktop\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\batch\\Desktop\\КПИ\\3 курс 2 сместр\\ТРПЗ\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj",
         "projectName": "BlocksLibrary",
-        "projectPath": "C:\\Users\\batch\\Desktop\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj",
+        "projectPath": "C:\\Users\\batch\\Desktop\\КПИ\\3 курс 2 сместр\\ТРПЗ\\lab1lubitsky\\tank\\BlocksLibrary\\BlocksLibrary.csproj",
         "packagesPath": "C:\\Users\\batch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\batch\\Desktop\\lab1lubitsky\\tank\\BlocksLibrary\\obj\\",
+        "outputPath": "C:\\Users\\batch\\Desktop\\КПИ\\3 курс 2 сместр\\ТРПЗ\\lab1lubitsky\\tank\\BlocksLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

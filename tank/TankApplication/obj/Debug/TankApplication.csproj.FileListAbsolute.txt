@@ -11,3 +11,16 @@ C:\Users\batch\Desktop\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplicati
 C:\Users\batch\Desktop\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.csproj.CopyComplete
 C:\Users\batch\Desktop\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.exe
 C:\Users\batch\Desktop\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.pdb
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\bin\Debug\TankApplication.exe.config
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\bin\Debug\TankApplication.exe
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\bin\Debug\TankApplication.pdb
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\bin\Debug\BlocksLibrary.dll
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\bin\Debug\BlocksLibrary.pdb
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.csprojAssemblyReference.cache
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\BrilliantApplication.MainForm.resources
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\BrilliantApplication.Properties.Resources.resources
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.csproj.GenerateResource.cache
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.csproj.CoreCompileInputs.cache
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.csproj.CopyComplete
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.exe
+C:\Users\batch\Desktop\КПИ\3 курс 2 сместр\ТРПЗ\lab1lubitsky\tank\TankApplication\obj\Debug\TankApplication.pdb

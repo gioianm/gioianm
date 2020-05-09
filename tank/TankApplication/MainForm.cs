@@ -96,5 +96,35 @@ namespace BrilliantApplication
             controlSystem.OutputStream += m_outputStreamStep;
             label2.Text = Math.Round(controlSystem.OutputStream, m_roundCof).ToString();
         }
+       
+              
+        private void SendRegulatorTaskButton_Click_1(object sender, EventArgs e)
+        {
+            controlSystem.Regulator.RegulatorTask = Convert.ToDouble(regulatorTaskTextBox.Text);
+            currentRegulatorTaskLabel.Text = controlSystem.Regulator.RegulatorTask.ToString();
+        }
+
+        private void AutomaticControlButton_Click_1(object sender, EventArgs e)
+        {
+            controlSystem.WorkMode = WorkMode.Automatic;
+            workStateLabel.Text = "Automatic";
+        }
+
+        private void SendSettingsButton_Click_1(object sender, EventArgs e)
+        {
+            controlSystem.Regulator.K = Convert.ToDouble(kTextBox.Text);
+            controlSystem.Regulator.Ki = Convert.ToDouble(kiTextBox.Text);
+            controlSystem.Regulator.Kd = Convert.ToDouble(kdTextBox.Text);
+
+            kLabel.Text = controlSystem.Regulator.K.ToString();
+            kiLabel.Text = controlSystem.Regulator.Ki.ToString();
+            kdLabel.Text = controlSystem.Regulator.Kd.ToString();
+        }
+
+        private void ManualControlButton_Click_1(object sender, EventArgs e)
+        {
+            controlSystem.WorkMode = WorkMode.Manual;
+            workStateLabel.Text = "Manual";
+        }
     }
 }
