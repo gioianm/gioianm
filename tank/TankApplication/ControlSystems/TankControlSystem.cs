@@ -126,39 +126,39 @@ namespace BrilliantApplication.ControlSystems
             var inputValue = InputGain*InputStream - OutputGain*OutputStream;
             var result = Object.Calculate(inputValue);
 
+            
+
+
+            if (result <= 0)
+            {
+                result = 0;
+                
+               foreach (var block in Object.Blocks)
+                {
+                    var integralBlock = block as IntegralBlock;
+
+                    if (integralBlock != null)
+                    {
+                        integralBlock.StepBackAtLimitValue();
+                    }
+                }
+            }
+
+            if (WaterLevel >= SystemSettings.WaterLevelLimit)
+            {
+                result = SystemSettings.WaterLevelLimit;
+
+                foreach (var block in Object.Blocks)
+                {
+                    var integralBlock = block as IntegralBlock;
+
+                    if (integralBlock != null)
+                    {
+                        integralBlock.StepBackAtLimitValue();
+                    }
+                }
+            }
             WaterLevel = result;
-
-
-            if (WaterLevel <= 0 && inputValue < 0)
-            {
-                WaterLevel = 0;
-
-                foreach (var block in Object.Blocks)
-                {
-                    var integralBlock = block as IntegralBlock;
-
-                    if (integralBlock != null)
-                    {
-                        integralBlock.StepBackAtLimitValue();
-                    }
-                }
-            }
-
-            if (WaterLevel >= SystemSettings.WaterLevelLimit && inputValue > 0)
-            {
-                WaterLevel = SystemSettings.WaterLevelLimit;
-
-                foreach (var block in Object.Blocks)
-                {
-                    var integralBlock = block as IntegralBlock;
-
-                    if (integralBlock != null)
-                    {
-                        integralBlock.StepBackAtLimitValue();
-                    }
-                }
-            }
-
             Time += DT;
             
             return WaterLevel;
