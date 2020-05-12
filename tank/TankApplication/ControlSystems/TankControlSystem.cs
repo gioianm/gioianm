@@ -16,30 +16,14 @@ namespace BrilliantApplication.ControlSystems
     }
     public class TankControlSystem : ObjectControlSystem
     {
-        private double m_inputStream = 0;
+        private double InputStream;
         private double m_outputStream = 0;
         public double m_regulatorTask = 0;
         private AperiodicBlock m_withoutHitBlock;
         private double m_valve = 0;
-        public double InputStream
-        {
-            get { return m_inputStream; }
-            set
-            {
-                if (value < 0)
-                {
-                    m_inputStream = 0;
-                }
-                else if (value > SystemSettings.MaxInputStream)
-                {
-                    m_inputStream = SystemSettings.MaxInputStream;
-                }
-                else
-                {
-                    m_inputStream = value;
-                }
-            }
-        }
+        private double m_inputgain = 0;
+        private double m_outputgain = 0;
+
         public double OutputStream
         {
             get { return m_outputStream; }
@@ -59,19 +43,57 @@ namespace BrilliantApplication.ControlSystems
                 }
             }
         }
+        public double InputGain
+        {
+            get { return m_inputgain; }
+            set
+            {
+                if (value < 0)
+                {
+                    m_inputgain = 0;
+                }
+                else if (value > SystemSettings.Gain1)
+                {
+                    m_inputgain = SystemSettings.Gain1;
+                }
+                else
+                {
+                    m_inputgain = value;
+                }
+            }
+        }
+        public double OutputGain
+        {
+            get { return m_outputgain; }
+            set
+            {
+                if (value < 0)
+                {
+                    m_outputgain = 0;
+                }
+                else if (value > SystemSettings.MaxOutputStream)
+                {
+                    m_outputgain = SystemSettings.Gain2;
+                }
+                else
+                {
+                    m_outputgain = value;
+                }
+            }
+        }
 
         public double Valve { get { return m_valve; } set { if (value > 1) m_valve = 1; else if (value < 0) m_valve = 0; else m_valve = value; } }
         public double WaterLevel { get; set; }
-        public GainBlock InputStreamBlock { get; set; }
+       
         public WorkMode WorkMode { get; set; } = WorkMode.Manual;
         public PIDRegulator Regulator { get; set; }
         public TankControlSystem(double dt) : base() 
         {
             DT = dt;
-            InputStream = 0;
             Valve = 0;
-            m_withoutHitBlock = new AperiodicBlock(dt, SystemSettings.TForValve);
-
+            InputStream = SystemSettings.MaxInputStream;
+            OutputStream = SystemSettings.MaxOutputStream;
+            m_withoutHitBlock = new AperiodicBlock(dt, SystemSettings.T);
             var blocks = new Queue<IBlock>();
             blocks.Enqueue(new DelayBlock(dt, SystemSettings.Delay));
             blocks.Enqueue(new AperiodicBlock(DT, SystemSettings.T));
@@ -85,18 +107,27 @@ namespace BrilliantApplication.ControlSystems
         {
             var e = m_withoutHitBlock.Calculate(Regulator.RegulatorTask) - WaterLevel;
 
+
             if (WorkMode == WorkMode.Automatic)
             {
-                InputStream = Regulator.Regulate(e);
+
+
+                InputGain = Math.Round((Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 2);
+                
+               
+                OutputGain = 0.2;
+               
             }
             else
             {
                 Regulator.RecalculationForShocklessMode(InputStream, e);
             }
-            var inputValue = InputStream - OutputStream;
-            var result = Object.Calculate(inputValue)-inputValue;
+
+            var inputValue = InputGain*InputStream - OutputGain*OutputStream;
+            var result = Object.Calculate(inputValue);
 
             WaterLevel = result;
+
 
             if (WaterLevel <= 0 && inputValue < 0)
             {
@@ -129,7 +160,7 @@ namespace BrilliantApplication.ControlSystems
             }
 
             Time += DT;
-
+            
             return WaterLevel;
         }
 

@@ -288,27 +288,27 @@
             this.kLabel.AutoSize = true;
             this.kLabel.Location = new System.Drawing.Point(48, 26);
             this.kLabel.Name = "kLabel";
-            this.kLabel.Size = new System.Drawing.Size(50, 20);
+            this.kLabel.Size = new System.Drawing.Size(19, 20);
             this.kLabel.TabIndex = 26;
-            this.kLabel.Text = "klabel";
+            this.kLabel.Text = "K";
             // 
             // kiLabel
             // 
             this.kiLabel.AutoSize = true;
             this.kiLabel.Location = new System.Drawing.Point(48, 54);
             this.kiLabel.Name = "kiLabel";
-            this.kiLabel.Size = new System.Drawing.Size(53, 20);
+            this.kiLabel.Size = new System.Drawing.Size(22, 20);
             this.kiLabel.TabIndex = 27;
-            this.kiLabel.Text = "kilabel";
+            this.kiLabel.Text = "Ki";
             // 
             // kdLabel
             // 
             this.kdLabel.AutoSize = true;
             this.kdLabel.Location = new System.Drawing.Point(48, 86);
             this.kdLabel.Name = "kdLabel";
-            this.kdLabel.Size = new System.Drawing.Size(59, 20);
+            this.kdLabel.Size = new System.Drawing.Size(28, 40);
             this.kdLabel.TabIndex = 28;
-            this.kdLabel.Text = "kdlabel";
+            this.kdLabel.Text = "Kd\r\n\r\n";
             // 
             // kTextBox
             // 
@@ -344,7 +344,7 @@
             // 
             this.regulatorTaskTextBox.Location = new System.Drawing.Point(119, 118);
             this.regulatorTaskTextBox.Name = "regulatorTaskTextBox";
-            this.regulatorTaskTextBox.Size = new System.Drawing.Size(75, 26);
+            this.regulatorTaskTextBox.Size = new System.Drawing.Size(30, 26);
             this.regulatorTaskTextBox.TabIndex = 34;
             // 
             // currentRegulatorTaskLabel
@@ -352,9 +352,9 @@
             this.currentRegulatorTaskLabel.AutoSize = true;
             this.currentRegulatorTaskLabel.Location = new System.Drawing.Point(48, 118);
             this.currentRegulatorTaskLabel.Name = "currentRegulatorTaskLabel";
-            this.currentRegulatorTaskLabel.Size = new System.Drawing.Size(65, 20);
+            this.currentRegulatorTaskLabel.Size = new System.Drawing.Size(43, 20);
             this.currentRegulatorTaskLabel.TabIndex = 35;
-            this.currentRegulatorTaskLabel.Text = "curTask";
+            this.currentRegulatorTaskLabel.Text = "Task";
             // 
             // sendSettingsButton
             // 

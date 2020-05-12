@@ -13,8 +13,9 @@ namespace BrilliantApplication.ControlSystems
         static public double Gain2 { get; } = 1;
         static public double WaterLevelLimit { get; } = 10;
         static public double MaxInputStream { get; } = 1;
+        static public double MaxGainStep { get; } = 0.1;
         static public double RecommendedStep { get; } = 0.01;
-        static public double MaxOutputStream { get; } = 2;
+        static public double MaxOutputStream { get; } = 1;
         static public double Delay { get; } = 2;
         static public double TForValve { get; } = 0.5;
         static public double Interference { get; } = 0.06;

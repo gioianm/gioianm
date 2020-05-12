@@ -18,8 +18,8 @@ namespace BrilliantApplication
     {
         private TankControlSystem controlSystem;
         private const double dt = 0.5;
-        private double m_inputStreamStep = 0.1;
-        private double m_outputStreamStep = 0.1;
+        
+        
         private int m_roundCof = 5;
         
         
@@ -31,17 +31,22 @@ namespace BrilliantApplication
         }
 
       
-
         private void reducePreasureButton_Click(object sender, EventArgs e)
         {
-            controlSystem.InputStream -= m_inputStreamStep;
-            preasureLabel.Text = Math.Round(controlSystem.InputStream, m_roundCof).ToString();
+            if (controlSystem.WorkMode == WorkMode.Manual)
+            {
+                controlSystem.InputGain -= SystemSettings.MaxGainStep;
+                preasureLabel.Text = Math.Round(controlSystem.InputGain, m_roundCof).ToString();
+            }
         }
 
         private void increasePreasureButton_Click(object sender, EventArgs e)
         {
-            controlSystem.InputStream += m_inputStreamStep;
-            preasureLabel.Text = Math.Round(controlSystem.InputStream, m_roundCof).ToString();
+            if (controlSystem.WorkMode == WorkMode.Manual)
+            {
+                controlSystem.InputGain += SystemSettings.MaxGainStep;
+                preasureLabel.Text = Math.Round(controlSystem.InputGain, m_roundCof).ToString();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -50,7 +55,8 @@ namespace BrilliantApplication
 
             waterLevelLabel.Text = Math.Round(controlSystem.WaterLevel, m_roundCof).ToString();
             waterLimitStateChart.Series[0].Points.AddXY(controlSystem.Time, controlSystem.WaterLevel);
-
+            preasureLabel.Text = Math.Round(controlSystem.InputGain, m_roundCof).ToString();
+            label2.Text = Math.Round(controlSystem.OutputGain, m_roundCof).ToString();
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -87,21 +93,27 @@ namespace BrilliantApplication
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            controlSystem.OutputStream -= m_outputStreamStep;
-            label2.Text = Math.Round(controlSystem.OutputStream, m_roundCof).ToString();
+            if (controlSystem.WorkMode == WorkMode.Manual)
+            { 
+            controlSystem.OutputGain -= SystemSettings.MaxGainStep;
+            label2.Text = Math.Round(controlSystem.OutputGain, m_roundCof).ToString();
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            controlSystem.OutputStream += m_outputStreamStep;
-            label2.Text = Math.Round(controlSystem.OutputStream, m_roundCof).ToString();
+            if (controlSystem.WorkMode == WorkMode.Manual)
+            {
+                controlSystem.OutputGain += SystemSettings.MaxGainStep;
+                label2.Text = Math.Round(controlSystem.OutputGain, m_roundCof).ToString();
+            }
         }
        
               
         private void SendRegulatorTaskButton_Click_1(object sender, EventArgs e)
         {
             controlSystem.Regulator.RegulatorTask = Convert.ToDouble(regulatorTaskTextBox.Text);
-            currentRegulatorTaskLabel.Text = controlSystem.Regulator.RegulatorTask.ToString();
+            currentRegulatorTaskLabel.Text = (controlSystem.Regulator.RegulatorTask+1).ToString();
         }
 
         private void AutomaticControlButton_Click_1(object sender, EventArgs e)
