@@ -93,20 +93,20 @@ namespace BrilliantApplication
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (controlSystem.WorkMode == WorkMode.Manual)
-            { 
+            
+            
             controlSystem.OutputGain -= SystemSettings.MaxGainStep;
             label2.Text = Math.Round(controlSystem.OutputGain, m_roundCof).ToString();
-            }
+            
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (controlSystem.WorkMode == WorkMode.Manual)
-            {
+          
+            
                 controlSystem.OutputGain += SystemSettings.MaxGainStep;
                 label2.Text = Math.Round(controlSystem.OutputGain, m_roundCof).ToString();
-            }
+            
         }
        
               

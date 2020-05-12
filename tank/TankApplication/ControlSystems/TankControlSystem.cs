@@ -93,6 +93,7 @@ namespace BrilliantApplication.ControlSystems
             Valve = 0;
             InputStream = SystemSettings.MaxInputStream;
             OutputStream = SystemSettings.MaxOutputStream;
+            OutputGain = 0.2;
             m_withoutHitBlock = new AperiodicBlock(dt, SystemSettings.T);
             var blocks = new Queue<IBlock>();
             blocks.Enqueue(new DelayBlock(dt, SystemSettings.Delay));
@@ -113,10 +114,9 @@ namespace BrilliantApplication.ControlSystems
 
 
                 InputGain = Math.Round((Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 2);
-                
-               
-                OutputGain = Math.Round(0.2*(Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 3);
-               
+
+
+                             
             }
             else
             {
