@@ -115,7 +115,7 @@ namespace BrilliantApplication.ControlSystems
                 InputGain = Math.Round((Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 2);
                 
                
-                OutputGain = 0.2;
+                OutputGain = Math.Round(0.2*(Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 3);
                
             }
             else
