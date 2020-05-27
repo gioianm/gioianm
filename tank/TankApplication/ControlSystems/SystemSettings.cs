@@ -19,5 +19,8 @@ namespace BrilliantApplication.ControlSystems
         static public double Delay { get; } = 2;
         static public double TForValve { get; } = 0.5;
         static public double Interference { get; } = 0.06;
+        static public double DefaultKd { get; } = 0;
+        static public double DefaultK { get; } = 1;
+        static public double DefaultKi { get; } = 0.1;
     }
 }

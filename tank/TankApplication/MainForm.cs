@@ -17,6 +17,8 @@ namespace BrilliantApplication
     public partial class MainForm : Form
     {
         private TankControlSystem controlSystem;
+        private TankControlSystem controlSystem2;
+        private NelderMeadMethod optimization;
         private const double dt = 0.5;
         
         
@@ -25,12 +27,24 @@ namespace BrilliantApplication
         
         public MainForm()
         {
+
             InitializeComponent();
             valveCoefficientLabel.Text = ControlSystems.SystemSettings.Interference.ToString();
+            kTextBox.Text = SystemSettings.DefaultK.ToString();
+            kiTextBox.Text = SystemSettings.DefaultKi.ToString();
+           
+            kdTextBox.Text = SystemSettings.DefaultK.ToString();
             controlSystem = new TankControlSystem(dt);
+            controlSystem2 = new TankControlSystem(dt);
+            optimization = new NelderMeadMethod();
+            double[] X = controlSystem.Regulator.GetConfig();
+            controlSystem2.Regulator.RewriteConfig(optimization.nelMead(ref X));
+
+            Optimal.Text += string.Format("\nK = {0}\nKi = {1}\nKd = {2}", controlSystem2.Regulator.K, controlSystem2.Regulator.Ki, controlSystem.Regulator.Kd);
+
         }
 
-      
+
         private void reducePreasureButton_Click(object sender, EventArgs e)
         {
             if (controlSystem.WorkMode == WorkMode.Manual)

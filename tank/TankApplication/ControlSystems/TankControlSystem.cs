@@ -24,6 +24,7 @@ namespace BrilliantApplication.ControlSystems
         private double m_inputgain = 0;
         private double m_outputgain = 0;
 
+
         public double OutputStream
         {
             get { return m_outputStream; }
@@ -103,7 +104,6 @@ namespace BrilliantApplication.ControlSystems
             Object = new ComplexBlock(blocks);
             Regulator = new PIDRegulator(dt);
         }
-
         public double CalculateWaterLevel()
         {
             var e = m_withoutHitBlock.Calculate(Regulator.RegulatorTask) - WaterLevel;
@@ -111,12 +111,7 @@ namespace BrilliantApplication.ControlSystems
 
             if (WorkMode == WorkMode.Automatic)
             {
-
-
-                InputGain = Math.Round((Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 2);
-
-
-                             
+                 InputGain = Math.Round((Regulator.Regulate(e) / Regulator.Regulate(InputStream)), 2);         
             }
             else
             {
@@ -132,7 +127,7 @@ namespace BrilliantApplication.ControlSystems
             if (result <= 0)
             {
                 result = 0;
-                
+                inputValue = 0;
                foreach (var block in Object.Blocks)
                 {
                     var integralBlock = block as IntegralBlock;
@@ -144,7 +139,7 @@ namespace BrilliantApplication.ControlSystems
                 }
             }
 
-            if (WaterLevel >= SystemSettings.WaterLevelLimit)
+            if (result >= SystemSettings.WaterLevelLimit)
             {
                 result = SystemSettings.WaterLevelLimit;
 

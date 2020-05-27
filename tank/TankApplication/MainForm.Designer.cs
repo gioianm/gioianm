@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.waterLimitStateChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -66,6 +66,7 @@
             this.automaticControlButton = new System.Windows.Forms.Button();
             this.sendRegulatorTaskButton = new System.Windows.Forms.Button();
             this.manualControlButton = new System.Windows.Forms.Button();
+            this.Optimal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.waterLimitStateChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -77,18 +78,18 @@
             // 
             // waterLimitStateChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.waterLimitStateChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.waterLimitStateChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.waterLimitStateChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.waterLimitStateChart.Legends.Add(legend2);
             this.waterLimitStateChart.Location = new System.Drawing.Point(674, 14);
             this.waterLimitStateChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.waterLimitStateChart.Name = "waterLimitStateChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Water level";
-            this.waterLimitStateChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Water level";
+            this.waterLimitStateChart.Series.Add(series2);
             this.waterLimitStateChart.Size = new System.Drawing.Size(611, 310);
             this.waterLimitStateChart.TabIndex = 1;
             this.waterLimitStateChart.Text = "chart1";
@@ -400,11 +401,21 @@
             this.manualControlButton.UseVisualStyleBackColor = true;
             this.manualControlButton.Click += new System.EventHandler(this.ManualControlButton_Click_1);
             // 
+            // Optimal
+            // 
+            this.Optimal.AutoSize = true;
+            this.Optimal.Location = new System.Drawing.Point(896, 329);
+            this.Optimal.Name = "Optimal";
+            this.Optimal.Size = new System.Drawing.Size(63, 20);
+            this.Optimal.TabIndex = 40;
+            this.Optimal.Text = "Optimal";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 401);
+            this.Controls.Add(this.Optimal);
             this.Controls.Add(this.manualControlButton);
             this.Controls.Add(this.sendRegulatorTaskButton);
             this.Controls.Add(this.automaticControlButton);
@@ -482,6 +493,7 @@
         private System.Windows.Forms.Button automaticControlButton;
         private System.Windows.Forms.Button sendRegulatorTaskButton;
         private System.Windows.Forms.Button manualControlButton;
+        private System.Windows.Forms.Label Optimal;
     }
 }
 

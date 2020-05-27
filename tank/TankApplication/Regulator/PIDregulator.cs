@@ -20,7 +20,7 @@ namespace BrilliantApplication.Regulators
         public double Ti { get { return 1 / Ki; } set { Ki = 1 / value; } }
         public double Kd { get; set; }
 
-        public PIDRegulator(double dt, double K =0, double Ki =0, double Kd =0)
+        public PIDRegulator(double dt, double K = 0, double Ki=0 , double Kd =0)
         {
             m_gainBlock = new GainBlock(K);
             m_integralBlock = new RegIntegralBlock(dt);
@@ -29,6 +29,22 @@ namespace BrilliantApplication.Regulators
             this.K = K;
             this.Ki = Ki;
             this.Kd = Kd;
+        }
+
+        public void RewriteConfig(double []P)
+        {
+            this.K = P[0];
+            this.Ki = P[1];
+            this.Kd = P[2];
+        }
+        public double[] GetConfig()
+        {
+            //return new double[] { Kp, Ti, Td };
+            double[] ret = new double[3];
+            ret[0] = K;
+            ret[1] = Ki;
+            ret[2] = Kd;
+            return ret;
         }
 
         public double RegulatorTask
